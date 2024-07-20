@@ -43,6 +43,20 @@
         border: 2px solid black;
         font-size: 18px;
       }
+      .form .guessSubmit {
+        font-size: 18px;
+        text-transform: capitalize;
+        padding: 10px 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+        color: white;
+        background: black;
+        cursor: pointer;
+      }
+      .results p {
+        font-size: 20px;
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
@@ -54,12 +68,7 @@
       <form class="form">
         <label for="guessField" id="guess">Guess a number</label>
         <input type="text" id="guessField" class="guessField" />
-        <input
-          type="submit"
-          id="submit"
-          value="submit guess"
-          class="guessSubmit"
-        />
+        <input type="submit" id="submit" value="submit guess" class="guessSubmit" />
       </form>
       <div class="results">
         <p>Previous Guesses: <span class="preGuess"></span></p>
@@ -67,5 +76,6 @@
         <p class="lowHi"></p>
       </div>
     </div>
+    <script></script>
   </body>
 </html>
