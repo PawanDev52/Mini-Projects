@@ -1,65 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        body{
-            background-color: grey;
-        }
-        .container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            row-gap: 50px;
-            height: 85vh;
-        }
-        .heading{
-            font-size: 36px;
-            font-size: 600;
-        }
-        form p label{
-            font-size: 20px;
-            font-weight: 600;
-        }
-        form p input{
-            padding: 5px;
-        }
-        #calculate{
-            display: block;
-            margin: auto;
-            padding: 5px 10px;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 10px;
-    border: 1px solid white;
-        }
-        .weight-guide{
-            display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 5px;
-        }
+      body {
+        background-color: grey;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 50px;
+        height: 85vh;
+      }
+      .heading {
+        font-size: 36px;
+        font-size: 600;
+      }
+      form p label {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      form p input {
+        padding: 5px;
+      }
+      #calculate {
+        display: block;
+        margin: auto;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 10px;
+        border: 1px solid white;
+      }
+      #result {
+        text-align: center;
+        padding-top: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+      }
+      .weight-guide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 5px;
+      }
     </style>
-</head>
-<body>
-<div class="container">
-    <h1 class="heading">BMI Calculator</h1>
-    <form action="">
-        <p><label for="">Height in CM:</label> <input type="text" id="height"></p>
-        <p><label for="">Weight in Kg:</label> <input type="text" id="weight"></p>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">BMI Calculator</h1>
+      <form action="">
+        <p>
+          <label for="">Height in CM:</label> <input type="text" id="height" />
+        </p>
+        <p>
+          <label for="">Weight in Kg:</label> <input type="text" id="weight" />
+        </p>
         <button id="calculate">Calculate</button>
         <div id="result"></div>
         <div class="weight-guide">
-            <h3>BMI Weight Guide</h3>
-            <p>Under Weight = Less than 18.6</p>
-            <p>Normal Range = 18.6 and 24.9</p>
-            <p>Overweight = Greater than 24.9</p>
+          <h3>BMI Weight Guide</h3>
+          <p>Under Weight = Less than 18.6</p>
+          <p>Normal Range = 18.6 and 24.9</p>
+          <p>Overweight = Greater than 24.9</p>
         </div>
-    </form>
-</div>
-</body>
+      </form>
+    </div>
+    <script>
+      let form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let height = parseInt(document.querySelector("#height").value);
+        let weight = parseInt(document.querySelector("#weight").value);
+        let result = document.querySelector("#result");
+        let bmi = (weight / ((height * height) / 10000)).toFixed(2);
+        if (height < 0 || height === "" || isNaN(height)) {
+          result.innerHTML = `Please enter a valid height ${height}`;
+        } else if (weight < 0 || weight === "" || isNaN(weight)) {
+          result.innerHTML = `Please enter a valid height ${weight}`;
+        }
+        if (bmi < 18.6) {
+          result.innerHTML = `Your bmi is ${bmi}. You are Under weight`;
+        } else if (bmi > 18.6 && bmi < 24.9) {
+          result.innerHTML = `Your bmi is ${bmi}. Your weight is normal`;
+        } else {
+          result.innerHTML = `Your bmi is ${bmi}. You are Over weight`;
+        }
+      });
+    </script>
+  </body>
 </html>
