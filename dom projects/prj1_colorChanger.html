@@ -14,37 +14,40 @@
         flex-direction: column;
         row-gap: 40px;
       }
-
       .heading {
         font-size: 36px;
         font-weight: 600;
       }
-
       .btn {
         width: 100px;
         height: 100px;
         border: 3px solid black;
         margin: 15px;
       }
-
       #grey {
         background-color: grey;
       }
-
       #blue {
         background-color: blue;
       }
-
       #yellow {
         background-color: yellow;
       }
-
       #pink {
         background-color: pink;
       }
+      #purple {
+        background-color: purple;
+      }
+      #orange {
+        background-color: orange;
+      }
+      .text{
+        font-size: 18px;
+        font-weight: 500;
+      }
     </style>
   </head>
-
   <body>
     <div class="container">
       <h2 class="heading">Color Schema Switcher</h2>
@@ -53,8 +56,22 @@
         <button class="btn" id="blue"></button>
         <button class="btn" id="yellow"></button>
         <button class="btn" id="pink"></button>
+        <button class="btn" id="purple"></button>
+        <button class="btn" id="orange"></button>
       </div>
+      <p class="text">Click on buttons for changing the color of the background. :)</p>
     </div>
-    <script></script>
+    <script>
+      const button = document.querySelectorAll(".btn");
+      const body = document.querySelector("body");
+      button.forEach(button => {
+        // button.onclick = (e)=>{
+        //     body.style.background = e.target.id;
+        // }
+        button.addEventListener("click", (e)=>{
+            body.style.background = e.target.id;
+        })
+      });
+    </script>
   </body>
 </html>
