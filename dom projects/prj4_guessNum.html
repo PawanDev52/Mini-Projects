@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the number</title>
     <style>
-        body{
-            background: grey;
-        }
+      body {
+        background: grey;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 75vh;
+      }
+      .container h1 {
+        text-transform: capitalize;
+        font-size: 36px;
+        margin: 0;
+      }
+      .container p {
+        font-size: 18px;
+        margin: 10px 0 0 0;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 15px;
+        padding: 20px 10px;
+      }
+      .form label {
+        font-size: 42px;
+        font-weight: 600;
+      }
+      .form .guessField {
+        padding: 10px;
+        width: 100%;
+        border-radius: 10px;
+        border: 2px solid black;
+        font-size: 18px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Number guessing game</h1>
-        <p>Try and guess a random number between 1 and 100.</p>
-        <p>You have 10 attempts to guess the right number.</p>
-        <br>
-        <form class="form">
-            <label for="guessField" id="guess">Guess a number</label>
-            <input type="text" id="guessField" class="guessField">
-            <input type="submit" id="submit" value="submit guess" class="guessSubmit">
-        </form>
-        <div class="results">
-            <p>Previous Guesses: <span class="preGuess"></span></p>
-            <p>Guesses Remaining: <span class="guessRemain">10</span></p>
-            <p class="lowHi"></p>
-        </div>
+      <h1>Number guessing game</h1>
+      <p>Try and guess a random number between 1 and 100.</p>
+      <p>You have 10 attempts to guess the right number.</p>
+      <br />
+      <form class="form">
+        <label for="guessField" id="guess">Guess a number</label>
+        <input type="text" id="guessField" class="guessField" />
+        <input
+          type="submit"
+          id="submit"
+          value="submit guess"
+          class="guessSubmit"
+        />
+      </form>
+      <div class="results">
+        <p>Previous Guesses: <span class="preGuess"></span></p>
+        <p>Guesses Remaining: <span class="guessRemain">10</span></p>
+        <p class="lowHi"></p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
