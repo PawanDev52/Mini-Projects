@@ -229,6 +229,7 @@
       function checkGuess(guess) {
         if (guess === randomNum) {
           displayMessage(`Great Your guess is correct`);
+          endGame()
         } else if (guess > randomNum) {
           displayMessage(`Guess a lower number`);
         } else if (guess < randomNum) {
@@ -273,6 +274,7 @@
           playGame = true;
         });
       }
+      
     </script>
   </body>
 </html>
