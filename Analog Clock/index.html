@@ -1,80 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Analog Clock</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
-      body {
-        background: #25252d;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .analog-clock {
-        background: #2d2f41;
-        position: relative;
-        width: 460px;
-        height: 460px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
-      }
-      .analog-clock ul {
-        list-style: none;
-      }
-      .hour-container{
-        width: 460px;
-      }
-      .hour-numbers{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .hour-numbers li{
-        position: absolute;
-        height: 100%;
-        top: 0;
-      }
-      .hour-numbers .num{
-        color: #cee0f6;
-        font-size: 1.6em;
-        font-weight: 400;
-        margin: 10px;
-      }
-      .hour-numbers li:nth-child(1){
-        transform: rotate(90deg);
-      }
-      .hour-numbers li:nth-child(2){
-        transform: rotate(180deg);
-      }
-      .hour-numbers li:nth-child(3){
-        transform: rotate(270deg);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="analog-clock">
-      <div class="hour-container">
-        <ul class="hour-numbers">
-          <li><div class="num">3</div></li>
-          <li><div class="num">6</div></li>
-          <li><div class="num">9</div></li>
-          <li><div class="num">12</div></li>
-        </ul>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analog Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="analog-clock">
+    <div class="hour-container">
+      <ul class="hour-numbers">
+        <li><div class="num">3</div></li>
+        <li><div class="num">6</div></li>
+        <li><div class="num">9</div></li>
+        <li><div class="num">12</div></li>
+      </ul>
     </div>
-
-    <script></script>
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
