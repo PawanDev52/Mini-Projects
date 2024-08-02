@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switzerland Flag</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --white: #fff;
+        --red: #ff0002;
+        --flag-height: 200px;
+      }
+      .flag-swis {
+        background: var(--red);
+        height: var(--flag-height);
+        width: var(--flag-height);
+        margin: 30px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      /* method 1 till cross-2 */
+      .cross {
+        background: var(--white);
+        height: calc(var(--flag-height) * 3 / 16);
+        width: calc(var(--flag-height) * 5 / 8);
+      }
+      .cross-2 {
+        transform: rotate(90deg);
+        position: absolute;
+      }
+
+      /* method 2 */
+      /* .cross-1{
+            background: var(--white);
+            height: calc(var(--flag-height) * 3/16);
+            width: calc(var(--flag-height) * 5/8);
+        }
+        .cross-2{
+            background: var(--white);
+            height: calc(var(--flag-height) * 5/8);
+            width: calc(var(--flag-height) * 3/16);
+            position: absolute;
+        } */
+    </style>
+  </head>
+  <body>
+    <div class="flag-swis">
+      <div class="cross cross-1"></div>
+      <div class="cross cross-2"></div>
+    </div>
+  </body>
 </html>
