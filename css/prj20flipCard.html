@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip Card</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      :root {
+        --jeopardy-blue: #064ce9;
+        --font-color-main: #fff;
+      }
+      
+      .card {
+        height: 200px;
+        width: 380px;
+        background: var(--jeopardy-blue);
+        color: var(--font-color-main);
+        padding: 2em;
+        margin: 2em auto;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-transform: capitalize;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        font-size: 18px;
+        letter-spacing: 0.1rem;
+        line-height: 40px;
+      }
+      
+      .card:hover {
+        transform: rotateY(180deg);
+      }
+      
+      .card-back {
+        display: none;
+      }
+      
+      .card:hover .card-front {
+        display: none;
+      }
+      
+      .card:hover .card-back {
+        display: block;
+        transform: rotateY(180deg);
+      }
+      
+      .card-front,
+      .card-back {
+        backface-visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-front">
+        <h2>What is the marquee tag ?</h2>
+      </div>
+      <div class="card-back">
+        <h2>
+          This now deprecated HTML tag, popular in the early days of the
+          internet, magically made text scroll across the screen.
+        </h2>
+      </div>
+    </div>
+  </body>
+</html>
