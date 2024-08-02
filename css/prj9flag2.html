@@ -14,7 +14,28 @@
         --black: #000;
         --red: #de0002;
         --yellow: #ffce00;
-        --flag-height: 150px;
+        --flag-height: 350px;
+      }
+      .flag-germany {
+        height: var(--flag-height);
+        width: calc(var(--flag-height) * 5 / 4);
+        margin: 2em auto;
+        box-shadow: 0 0 5px #000;
+        /* display: grid; */
+        display: flex;
+        flex-direction: column;
+      }
+      .stripe {
+        flex-grow: 1;
+      }
+      .black {
+        background: var(--black);
+      }
+      .red {
+        background: var(--red);
+      }
+      .yellow {
+        background: var(--yellow);
       }
     </style>
   </head>
