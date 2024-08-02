@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Niger Flag</title>
     <style>
-
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--black);
+      }
+      :root {
+        --black: #000;
+        --orange: #e15307;
+        --white: #fff;
+        --green: #10af2a;
+        --flag-height: 200px;
+      }
+      .flag-niger {
+        background: blue;
+        height: var(--flag-height);
+        width: calc(var(--flag-height) * 7 / 6);
+        margin: 2em auto;
+        display: grid;
+        box-shadow: 0 0 5px #fff;
+      }
+      .orange {
+        background: var(--orange);
+      }
+      .white {
+        background: var(--white);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .green {
+        background: var(--green);
+      }
+      .circle {
+        background: var(--orange);
+        height: calc(var(--flag-height) / 3 * 0.85);
+        width: calc(var(--flag-height) / 3 * 0.85);
+        position: absolute;
+        border-radius: 50%;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="flag-niger">
-        <div class="stripe orange"></div>
-        <div class="stripe white">
-            <div class="circle"></div>
-        </div>
-        <div class="stripe green"></div>
+      <div class="stripe orange"></div>
+      <div class="stripe white">
+        <div class="circle"></div>
+      </div>
+      <div class="stripe green"></div>
     </div>
-</body>
+  </body>
 </html>
