@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweden Flag</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --blue: #0269a6;
+        --yellow: #fecc00;
+        --flag-height: 150px;
+        --flag-width: calc(var(--flag-height) * 8 / 5);
+      }
+      .flag-sweden {
+        height: var(--flag-height);
+        width: var(--flag-width);
+        background: var(--blue);
+        margin: 2em auto;
+        display: flex;
+        position: relative;
+      }
+      .stripe {
+        background: var(--yellow);
+        height: calc(var(--flag-height) * 1 / 5);
+      }
+      .yellow {
+        width: 100%;
+        align-self: center;
+      }
+      .yellow2 {
+        width: var(--flag-height);
+        transform: rotate(90deg);
+        position: absolute;
+        top: calc(var(--flag-height) * 4 / 10);
+        right: calc(var(--flag-width) * 5 / 16);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flag-sweden">
+      <div class="stripe yellow"></div>
+      <div class="stripe yellow2"></div>
+    </div>
+  </body>
 </html>
