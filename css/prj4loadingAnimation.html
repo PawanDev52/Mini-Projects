@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Animation</title>
+    <style>
+      :root {
+        --color-light: lightgray;
+        --color-dark: darkgray;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .circle {
+        height: 2em;
+        width: 2em;
+        background: #000;
+        margin: 0.5em;
+        border-radius: 50%;
+        animation: pulse infinite alternate 1s;
+      }
+
+      @keyframes pulse {
+        from {
+          background: var(--color-dark);
+        }
+        to {
+          background: var(--color-light);
+          height: 2.1em;
+          width: 2.1em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </body>
+</html>

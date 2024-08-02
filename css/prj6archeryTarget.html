@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archery Target</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --black: #282828;
+        --blue: #2892f9;
+        --red: #fb2f27;
+        --yellow: #fdfe29;
+      }
+      
+      .rings {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      .ring {
+        border-radius: 50%;
+      }
+      
+      .ring-1 {
+        background: var(--black);
+        padding: 50px;
+      }
+      
+      .ring-2 {
+        background: var(--blue);
+        padding: 50px;
+      }
+      
+      .ring-3 {
+        background: var(--red);
+        padding: 50px;
+      }
+      
+      .bullseye {
+        background: var(--yellow);
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rings">
+      <div class="ring ring-1">
+        <div class="ring ring-2">
+          <div class="ring ring-3">
+            <div class="ring bullseye"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
