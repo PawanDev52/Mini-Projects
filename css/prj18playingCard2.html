@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      
+      :root {
+        --card-height: 200px;
+      }
+      
+      .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+      }
+      
+      .card {
+        border: 1px solid #000;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        height: var(--card-height);
+        width: calc(var(--card-height) * 2 / 3);
+        border-radius: 5px;
+        padding: 0.5em;
+        color: red;
+        font-size: 1.25em;
+      }
+      
+      .middle {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        text-align: center;
+        font-size: 3em;
+      }
+      
+      .right {
+        transform: rotate(180deg);
+      }
+      
+      .left > div:first-child,
+      .right > div:first-child {
+        padding-left: 2px;
+      }
+      
+      .middle :nth-child(3),
+      .middle :nth-child(4) {
+        transform: scaleY(-1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="left">
+          <div>4</div>
+          <div>&hearts;</div>
+        </div>
+        <div class="middle">
+          <div>&hearts;</div>
+          <div>&hearts;</div>
+          <div>&hearts;</div>
+          <div>&hearts;</div>
+        </div>
+        <div class="right">
+          <div>4</div>
+          <div>&hearts;</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

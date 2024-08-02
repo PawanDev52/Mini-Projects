@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing Card - Ace of spades</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --card-height: 200px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+      }
+
+      .card {
+        border: 1px solid #000;
+        height: var(--card-height);
+        width: calc(var(--card-height) * 2 / 3);
+        border-radius: 5px;
+        display: grid;
+        padding: 0.5em 0.8em;
+        font-size: 1.2em;
+      }
+
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4em;
+      }
+
+      .bottom {
+        transform: rotate(180deg);
+      }
+
+      .top > div:nth-child(2),
+      .bottom > div:nth-child(2) {
+        padding-left: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="top">
+          <div>A</div>
+          <div>&spades;</div>
+        </div>
+        <div class="center">&spades;</div>
+        <div class="bottom">
+          <div>A</div>
+          <div>&spades;</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
