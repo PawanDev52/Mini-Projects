@@ -1,2 +1,2 @@
 # Mini-Projects
-Making some mini projects
+Making some mini projects.
