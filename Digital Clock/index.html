@@ -9,6 +9,13 @@
   </head>
   <body>
     <div class="digital-clock">
+      <i class="uil uil-ellipsis-v dot-menu-btn"></i>
+      <ul class="dot-menu">
+        <li class="menu-item">
+          <span class="clock-format-text">24-hour format</span>
+          <div class="format-switch-btn" data-format="12"></div>
+        </li>
+      </ul>
       <div class="time">
         <span class="hours">00</span>
         <span class="dots">:</span>
@@ -27,6 +34,13 @@
     </div>
 
     <script>
+      // Javascript for switch clock format
+      const formatSwitchBtn = document.querySelector(".format-switch-btn");
+
+      formatSwitchBtn.addEventListener("click", () => {
+        formatSwitchBtn.classList.toggle("active");
+      });
+
       // Get current time in javascript
       function clock() {
         var today = new Date();
@@ -51,6 +65,7 @@
         if (minutes < 10) {
           minutes = "0" + minutes;
         }
+
         if (seconds < 10) {
           seconds = "0" + seconds;
         }
@@ -62,6 +77,18 @@
       }
 
       var updateClock = setInterval(clock, 1000);
+
+      // Get the date in javascript
+      var today = new Date();
+      const dayNumber = today.getDate();
+      const year = today.getFullYear();
+      const dayName = today.toLocaleString("default", { weekday: "long" });
+      const monthName = today.toLocaleString("default", { month: "short" });
+
+      document.querySelector(".month-name").innerHTML = monthName;
+      document.querySelector(".day-name").innerHTML = dayName;
+      document.querySelector(".day-number").innerHTML = dayNumber;
+      document.querySelector(".year").innerHTML = year;
     </script>
   </body>
 </html>
