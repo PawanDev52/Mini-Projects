@@ -4,6 +4,14 @@ body {
   font-family: sans-serif;
 }
 
+.header {
+  width: 100%;
+  height: 200px;
+  background: url(programmer.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
 .nav {
   width: 100%;
   background: #000;

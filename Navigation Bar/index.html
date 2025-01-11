@@ -2,21 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>Responsive Navigation Bar</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   </head>
   <body>
+    <div class="header"></div>
+
     <!-- Navigation Bar Start -->
     <div class="nav">
       <div class="mobile-menu-bar">
         <p>Menu</p>
-        <i class="fa fa-bars"></i>
+        <i class="fa fa-bars btn"></i>
       </div>
       <div class="menu">
         <a href="#">Home</a>
@@ -27,5 +26,27 @@
       </div>
     </div>
     <!-- Navigation Bar End -->
+
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ducimus
+      maiores possimus officia eius! Nemo doloremque consectetur explicabo
+      aliquid assumenda officia doloribus debitis fuga. Numquam unde aut
+      repudiandae architecto omnis, earum asperiores maxime laborum!
+    </p>
+
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ducimus
+      maiores possimus officia eius! Nemo doloremque consectetur explicabo
+      aliquid assumenda officia doloribus debitis fuga. Numquam unde aut
+      repudiandae architecto omnis, earum asperiores maxime laborum!
+    </p>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".btn").click(function () {
+          $(".menu").toggleClass("active");
+        });
+      });
+    </script>
   </body>
 </html>
